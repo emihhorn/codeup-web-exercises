@@ -69,17 +69,33 @@ person.sayHello = function() {
          {name: 'Ryan', amount: 250},
          {name: 'George', amount: 320}
      ];
+function calculateDiscount(amount, discountAmountThreshold, discountPercentage){
+    if (amount > discountAmountThreshold) {
+        return amount * discountPercentage;
+    } else{
+        return 0
+    }
+}
+ function numToDollars(num) {
+    return '$' +num.toFixed(2);
 
-     shoppers.forEach(function(shoppers) {
-         let totalToGetDiscount = 200
-         let discountPercent =.12
-         if (shoppers.amount < totalToGetDiscount) {
-             return "NO DISCOUNT" + shoppers.name;
-         } else {
+ }
 
-         } console.log("Before the discount" + shoppers.amount + "After Discount" + discountPercent)
-     })
+     var discountAmountThreshold = 200;
+     var discountPercentage = .12;
 
+     shoppers.forEach(function(shopper) {
+        var shopperName = shopper.name;
+        var amountBeforeDiscount = shopper.amount;
+        var amountOff = calculateDiscount(amountBeforeDiscount, discountAmountThreshold, discountPercentage);
+        var totalCost = amountBeforeDiscount - amountOff;
+        var message = shopperName +
+            "purchased" + numToDollars(amountBeforeDiscount) +
+            "and is getting" + numToDollars(amountOff) + " off the purchase price" +
+            "and is paying" + numToDollars(totalCost);
+        console.log(message);
+     });
+//higher order function
 
 
     /** TODO:
@@ -95,18 +111,19 @@ person.sayHello = function() {
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-//const arrayBooks =
-//        ['JavaScript in 24hrs : Phil Ballard',
-//        'JavaScript the Good Parts : Douglas Crockford',
-//        'Basics Web Design: F3thinker',
-//        'Teach yourself HTML, CSS : Jennifer Kyrnin',
-//        'You dont know JS,yet: Kyle Simmon']
+let books = [
+        {title: 'JavaScript in 24hrs', author: {firstName: 'Phil', lastName: 'Ballard'}},
+        {title: 'JavaScript the Good Parts', author: {firstName: 'Douglas', lastName: 'Crockford'}},
+        {title: 'Basics Web Design', author: {firstName:'Fred', lastName: 'Thinker'}},
+        {title: 'Teach yourself HTML,CSS', author: {firstName: 'Jennifer', lastName: 'Kyrnin'}},
+        {title: 'You dont know JS,yet', author: {firstName: 'Kyle', lastName: 'Simmon'}},
+        ]
 
+console.log(books[1].title)
+console.log(books[1].author.firstName)
+console.log(books[1].author.lastName)
 
-//function iterate(Books){
-//    console.log(Books);
-//}
-//Array.prototype.forEach.call(arrayBooks, iterate);
+})();
 
 
 /*
@@ -118,8 +135,7 @@ var books = [
                 lastName: "Simmon"
             }
         },
-    ]
-        [
+
         {
             title1:'Teach yourself HTML, CSS, JS',
             author1: {
@@ -127,8 +143,7 @@ var books = [
                 lastName: "Kynin"
             }
         },
-        ]
-        [
+
         {
             title1:'Basics Web Design',
             author1: {
@@ -136,8 +151,7 @@ var books = [
                 lastName: "Thinker"
             }
         },
-        ]
-        [
+
         {
             title1:'JavaScript the Good Parts',
             author1: {
@@ -145,8 +159,7 @@ var books = [
                 lastName: "Crockford"
             }
         },
-        ]
-        [
+
         {
             title1:'JavaScript in 24 Hrs',
             author1: {
@@ -197,9 +210,9 @@ var books = [
      *   `showBookInfo` function.
      */
 
-})();
+//
 
-//})();
+
 
 //-- Mini Exercise 1
 //Create a few beverage objects and assign values to each object for the following properties:
