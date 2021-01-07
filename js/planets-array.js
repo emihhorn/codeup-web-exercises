@@ -27,7 +27,7 @@ logThePlanets();
    // console.log('Adding "Pluto" to the end of the planets array.');
     console.log(planets);
 planets.push("Pluto");
-logThePlanets(;)
+logThePlanets();
 
    // console.log('Removing "The Sun" from the beginning of the planets array.');
     console.log(planets);

@@ -11,6 +11,26 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
+    function addFullNameProperty(obj) {
+        // your code here
+        Object.defineProperty(obj, 'fullName', {
+            get:  function(){
+                return this.firstName + ' ' + this.lastName;
+            },
+            configurable:false
+        });
+    }
+
+    var person = {
+        firstName: 'Emily',
+        lastName: 'Horn'
+    };
+
+    addFullNameProperty(person);
+
+    console.log(person.fullName); // --> 'Emily Horn'
+
+
 
     /**
      * TODO:
@@ -21,6 +41,14 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+
+
+//alert("Hello World");
+
+person.sayHello = function() {
+    firstName: 'Emily'
+};
+    console.log(person.fullName);
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -36,11 +64,23 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+     var shoppers = [
+        {name: 'Cameron', amount: 180},
+         {name: 'Ryan', amount: 250},
+         {name: 'George', amount: 320}
+     ];
+
+     shoppers.forEach(function(shoppers) {
+         let totalToGetDiscount = 200
+         let discountPercent =.12
+         if (shoppers.amount < totalToGetDiscount) {
+             return "NO DISCOUNT" + shoppers.name;
+         } else {
+
+         } console.log("Before the discount" + shoppers.amount + "After Discount" + discountPercent)
+     })
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -55,6 +95,67 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
+//const arrayBooks =
+//        ['JavaScript in 24hrs : Phil Ballard',
+//        'JavaScript the Good Parts : Douglas Crockford',
+//        'Basics Web Design: F3thinker',
+//        'Teach yourself HTML, CSS : Jennifer Kyrnin',
+//        'You dont know JS,yet: Kyle Simmon']
+
+
+//function iterate(Books){
+//    console.log(Books);
+//}
+//Array.prototype.forEach.call(arrayBooks, iterate);
+
+
+/*
+var books = [
+        {
+            title:'You dont know JS,yet',
+            author: {
+                firstName: "Kyle",
+                lastName: "Simmon"
+            }
+        },
+    ]
+        [
+        {
+            title1:'Teach yourself HTML, CSS, JS',
+            author1: {
+                firstName: "Jennifer",
+                lastName: "Kynin"
+            }
+        },
+        ]
+        [
+        {
+            title1:'Basics Web Design',
+            author1: {
+                firstName: "F3",
+                lastName: "Thinker"
+            }
+        },
+        ]
+        [
+        {
+            title1:'JavaScript the Good Parts',
+            author1: {
+                firstName: "Douglas ",
+                lastName: "Crockford"
+            }
+        },
+        ]
+        [
+        {
+            title1:'JavaScript in 24 Hrs',
+            author1: {
+                firstName: "Douglas ",
+                lastName: "Crockford"
+            }
+        },
+        ]
+*/
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -80,6 +181,11 @@
      *      ...
      */
 
+
+
+
+
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -92,6 +198,8 @@
      */
 
 })();
+
+//})();
 
 //-- Mini Exercise 1
 //Create a few beverage objects and assign values to each object for the following properties:
@@ -191,44 +299,39 @@ vaccinate(nameOfVaccination) - takes in an argument for the name of the vaccinat
 new shot with the current date to the shotRecords array
  */
 
-var dog = {
-    breed : 'husky',
-    weightInPounds : '77lbs',
-    age : 4,
-    color : 'red',
-    canBreed : true,
-    shotRecords: ['rabbies', 'parvo', 'microchip'],
-    speak: function(){
-        console.log('Woof!');
-        console.log(this.age);
-        this.age += 1;
-    },
-    disableBreeding: function()
-    {
-        this.canBreed = false;
-    },
-    vaccinate: function (nameOfVaccine){
-    this.shotRecords.push({
-        typeOfShot : nameOfVaccine,
-        date: new Date()
-    })
-    }
+// var dog = {
+//    breed : 'husky',
+//    weightInPounds : '77lbs',
+//    age : 4,
+//    color : 'red',
+//    canBreed : true,
+//    shotRecords: ['rabbies', 'parvo', 'microchip'],
+//    speak: function(){
+//        console.log('Woof!');
+//        console.log(this.age);
+//        this.age += 1;
+//    },
+//    disableBreeding: function()
+//    {
+//        this.canBreed = false;
+//    },
+//    vaccinate: function (nameOfVaccine){
+//    this.shotRecords.push({
+//        typeOfShot : nameOfVaccine,
+//        date: new Date()
+//    })
+//    }
 
-};
+//};
 
-var shotRecord = {
-    date: new Date (),
-    typeOfShot: 'rabies'
-};
+//var shotRecord = {
+//    date: new Date (),
+//    typeOfShot: 'rabies'
+//};
 
-dog.speak();
-console.log(dog.age);
-dog.disableBreeding()
-console.log(dog.canBreed);
-dog.vaccinate('rabies');
-console.log(dog.shotRecords);
-
-
-
-
-
+//dog.speak();
+//console.log(dog.age);
+//dog.disableBreeding()
+//console.log(dog.canBreed);
+//dog.vaccinate('rabies');
+//console.log(dog.shotRecords);

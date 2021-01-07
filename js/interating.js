@@ -28,9 +28,9 @@ console.log(names[3]);
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-for(var i = 0; i < name.lenght i ++){
-    console.log(names[i]);
-}
+//for(var i = 0; i < name.length i ++){
+//    console.log(names[i]);
+//}
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -59,13 +59,14 @@ function first(array) {
 }
 console.log(first(names));
 
-functon second (array) {
+function second (array) {
     return array[1];
 }
 console.log(second(names));
 
 function last(array) {
-    return array{array.length - 1};
+    return array
+    {array.length - 1};
 }
 console.log(last(names));
 
