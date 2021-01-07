@@ -126,49 +126,49 @@ console.log(books[1].author.lastName)
 })();
 
 
-/*
+
 var books = [
-        {
-            title:'You dont know JS,yet',
+        {title:'You dont know JS,yet',
             author: {
                 firstName: "Kyle",
-                lastName: "Simmon"
+                lastName: "Simmon",
             }
         },
 
-        {
-            title1:'Teach yourself HTML, CSS, JS',
-            author1: {
+        {title:'Teach yourself HTML, CSS, JS',
+            author: {
                 firstName: "Jennifer",
-                lastName: "Kynin"
+                lastName: "Kynin",
             }
         },
 
-        {
-            title1:'Basics Web Design',
-            author1: {
+        {title:'Basics Web Design',
+            author: {
                 firstName: "F3",
-                lastName: "Thinker"
+                lastName: "Thinker",
             }
         },
 
-        {
-            title1:'JavaScript the Good Parts',
-            author1: {
-                firstName: "Douglas ",
-                lastName: "Crockford"
+        {title:'JavaScript the Good Parts',
+            author: {
+                firstName: "Douglas",
+                lastName: "Crockford",
             }
         },
 
-        {
-            title1:'JavaScript in 24 Hrs',
-            author1: {
+        {title:'JavaScript in 24 Hrs',
+            author: {
                 firstName: "Douglas ",
-                lastName: "Crockford"
-            }
+                lastName: "Crockford",
+
         },
-        ]
-*/
+        }]
+
+console.log(books[0].title)
+console.log(books[0].author.firstName)
+console.log(books[0].author.lastName)
+
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -194,7 +194,12 @@ var books = [
      *      ...
      */
 
-
+books.forEach(function (value, index, array){
+    for (let i = 0; i < books.length; i++){
+        console.log("Book #" + i + "\n" + books[i].title + "\n"
+        + books[i].author.firstName + " " + books [i].author.lastName)
+    }
+})
 
 
 
@@ -212,6 +217,10 @@ var books = [
 
 //
 
+//function createBook('title', 'author')
+
+
+//function showBookInfo(obj)
 
 
 //-- Mini Exercise 1
