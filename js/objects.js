@@ -199,9 +199,9 @@ books.forEach(function (value, index, array){
         console.log("Book #" + i + "\n" + books[i].title + "\n"
         + books[i].author.firstName + " " + books [i].author.lastName)
     }
-})
+});
 
-
+console.log(books);
 
 
     /**
