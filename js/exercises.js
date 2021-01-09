@@ -131,3 +131,184 @@ var fruitsAndVeggies = fruits.concat(vegetables);
 
 assert(fruitsAndVeggies, ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini'], "Exercise 10")
 addToDone("Exercise 10 is correct")
+
+// Exercise 11
+// Write a function definition for a function named addOne that takes in a number and returns that number plus one
+function addOne(x) {
+    return x + 1;
+}
+
+
+assert(addOne(2), 3, "Exercise 11");
+assert(addOne(0), 1, "Exercise 11");
+assert(addOne(positiveEvenNumber), positiveEvenNumber + 1, "Exercise 11");
+assert(addOne(negativeOddNumber), negativeOddNumber + 1, "Exercise 11");
+addToDone("Exercise 11 is correct.")
+
+
+
+// Exercise 12
+// Write a function definition named isPositive that takes in a number and returns true or false if that number is positive.
+// Think about the definition of a number that is positive.
+// Is 5 positive? Is 0.25 positive? Is 0.00001 positive? Is -0.001 positive?
+// Is zero itself positive? What about infinity? What about negative infinity?
+// See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators for guidance with JS comparison operators.
+function isPositive(x) {
+    if(x>0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+assert(isPositive(0.25), true, "Exercise 12");
+assert(isPositive(0.00001), true, "Exercise 12");
+assert(isPositive(Infinity), true, "Exercise 12");
+assert(isPositive(0), false, "Exercise 12");
+assert(isPositive(-0.001), false, "Exercise 12");
+assert(isPositive(positiveOddNumber), true, "Exercise 12");
+assert(isPositive(positiveEvenNumber), true, "Exercise 12");
+assert(isPositive(negativeOddNumber), false, "Exercise 12");
+assert(isPositive(negativeEvenNumber), false, "Exercise 12");
+assert(isPositive(-Infinity), false, "Exercise 12");
+addToDone("Exercise 12 is correct.")
+
+
+// Exercise 13
+// Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
+function isNegative(x) {
+    if(x < 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+assert(isNegative(positiveOddNumber), false, "Exercise 13");
+assert(isNegative(positiveEvenNumber), false, "Exercise 13");
+assert(isNegative(negativeOddNumber), true, "Exercise 13");
+assert(isNegative(negativeEvenNumber), true, "Exercise 13");
+addToDone("Exercise 13 is correct.")
+
+
+// Exercise 14
+// Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
+function isOdd(x) {
+    if(x % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+assert(isOdd(positiveOddNumber), true, "Exercise 14");
+assert(isOdd(positiveEvenNumber), false, "Exercise 14");
+assert(isOdd(negativeOddNumber), true, "Exercise 14");
+assert(isOdd(negativeEvenNumber), false, "Exercise 14");
+addToDone("Exercise 14 is correct.")
+
+// Exercise 15
+// Write a function definition named isEven that takes in a number and returns true or false if that number is even.
+function isEven(x) {
+    if(x % 2 === 0)
+        return true;
+    else
+        return false;
+}
+
+assert(isEven(2), true, "Exercise 15");
+assert(isEven(positiveOddNumber), false, "Exercise 15");
+assert(isEven(positiveEvenNumber), true, "Exercise 15");
+assert(isEven(negativeOddNumber), false, "Exercise 15");
+assert(isEven(negativeEvenNumber), true, "Exercise 15");
+addToDone("Exercise 15 is correct.")
+
+
+// Exercise 16
+// Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
+function identity(x) {
+    return x;
+}
+
+assert(identity(fruits), fruits, "Exercise 16");
+assert(identity(vegetables), vegetables, "Exercise 16");
+assert(identity(positiveOddNumber), positiveOddNumber, "Exercise 16");
+assert(identity(positiveEvenNumber), positiveEvenNumber, "Exercise 16");
+assert(identity(negativeOddNumber), negativeOddNumber, "Exercise 16");
+assert(identity(negativeEvenNumber), negativeEvenNumber, "Exercise 16");
+addToDone("Exercise 16 is correct.")
+
+
+// Exercise 17
+// Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
+function isPositiveOdd(x) {
+    if(x > 0 && x % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+assert(isPositiveOdd(3), true, "Exercise 17");
+assert(isPositiveOdd(positiveOddNumber), true, "Exercise 17");
+assert(isPositiveOdd(positiveEvenNumber), false, "Exercise 17");
+assert(isPositiveOdd(negativeOddNumber), false, "Exercise 17");
+assert(isPositiveOdd(negativeEvenNumber), false, "Exercise 17");
+addToDone("Exercise 17 is correct.")
+
+
+// Exercise 18
+// Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
+function isPositiveEven(x) {
+    if(x > 0 && x % 2 ===0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+assert(isPositiveEven(4), true, "Exercise 18" );
+assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
+assert(isPositiveEven(positiveEvenNumber), true, "Exercise 18");
+assert(isPositiveEven(negativeOddNumber), false, "Exercise 18");
+assert(isPositiveEven(negativeEvenNumber), false, "Exercise 18");
+addToDone("Exercise 18 is correct.")
+
+
+// Exercise 19
+// Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
+function isNegativeOdd(x) {
+    if(x < 0 && x % 2 !== 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+assert(isNegativeOdd(-3), true, "Exercise 19" );
+assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
+assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
+assert(isNegativeOdd(negativeOddNumber), true, "Exercise 19");
+assert(isNegativeOdd(negativeEvenNumber), false, "Exercise 19");
+addToDone("Exercise 19 is correct.")
+
+
+// Exercise 20
+// Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
+function isNegativeEven(x) {
+    if(x < 0 && x % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+assert(isNegativeEven(-4), true, "Exercise 20" );
+assert(isNegativeEven(positiveOddNumber), false, "Exercise 20");
+assert(isNegativeEven(positiveEvenNumber), false, "Exercise 20");
+assert(isNegativeEven(negativeOddNumber), false, "Exercise 20");
+assert(isNegativeEven(negativeEvenNumber), true, "Exercise 20");
+addToDone("Exercise 20 is correct.")
+
