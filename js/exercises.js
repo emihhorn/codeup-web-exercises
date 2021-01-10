@@ -312,6 +312,8 @@ assert(isNegativeEven(negativeOddNumber), false, "Exercise 20");
 assert(isNegativeEven(negativeEvenNumber), true, "Exercise 20");
 addToDone("Exercise 20 is correct.")
 
+
+
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
 function half(x) {
@@ -428,5 +430,3 @@ assert(isMultipleOfFive(9), false, "Exercise 27");
 assert(isMultipleOfFive(4), false, "Exercise 27");
 assert(isMultipleOfFive(10), true, "Exercise 27");
 addToDone("Exercise 27 is correct.")
-
-
