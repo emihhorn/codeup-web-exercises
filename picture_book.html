@@ -3,56 +3,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flexbox Basics Examples</title>
+    <title>PicBook</title>
     <style>
+
+
+
         * {
             box-sizing: border-box;
         }
-        body {
+        html, body, div, img {
             margin: 0;
-            font-family: Helvetica;
-            font-weight: bold;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
         }
-        .flex-container {
-            width: 700px;
+        body {
+            line-height: 1;
+        }
+
+  /*  *** A social media platform for you to just share your photos, no politics, no negative comments,
+  only happy/funny/nice emojis. No words ***
+
+
+   .flex-container {
+            width: 600px;
             border: 3px solid cadetblue;
             display: flex;
-            /*  additional flex item properties */
+
             flex-direction: row;
             justify-content: flex-start;
             flex-wrap: wrap;
             align-content: space-evenly;
-            height: 500px;
+            height: 600px;
             align-items: flex-start;
-            height: 500px;
+            height: 600px;
         }
         .flex-item {
             background: #BFD45D;
-            border: 2px solid #F9EFD6;
+            border: 3px solid #F9EFD6;
             padding: 1em;
-.flex-item:nth-of-type odd
+            margin: auto;
+        } */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5px;
+            justify-content: space-around;
         }
+        .item {
+            margin: 5px;
+        }
+
+
     </style>
 </head>
 <body>
 
-<div class="flex-container">
-    <div class="flex-item">Item 1</div>
-    <div class="flex-item">Item 2</div>
-    <div class="flex-item">Item 3</div>
-    <div class="flex-item">Item a</div>
-    <div class="flex-item">Item b</div>
-    <div class="flex-item">Item c</div>
-    <div class="flex-item">Item 4</div>
-    <div class="flex-item">Item 5</div>
-    <div class="flex-item">Item 6</div>
-    <div class="flex-item">Item d</div>
-    <div class="flex-item">Item e</div>
-    <div class="flex-item">Item f</div>
-
-
-
+<div class="container">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
+    <img class="item" src="https://source.unsplash.com/random/320x240" alt="Example image">
 </div>
+
+
+
+<hr>
+
 
 </body>
 </html>
