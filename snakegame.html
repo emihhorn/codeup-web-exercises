@@ -7,7 +7,7 @@
 <body>
 
 <div id="score">0</div>
-<canvas id="snakeboard" width="400" height="400"></canvas>
+<canvas id="snakeboard" width="500" height="500"></canvas>
 
 <style>
     #snakeboard {
@@ -24,9 +24,9 @@
 </body>
 
 <script>
-    const board_border = 'black';
-    const board_background = "white";
-    const snake_col = 'lightblue';
+    const board_border = 'rebeccapurple';
+    const board_background = "orange";
+    const snake_col = 'teal';
     const snake_border = 'darkblue';
 
     let snake = [
@@ -94,7 +94,7 @@
     }
 
     function drawFood() {
-        snakeboard_ctx.fillStyle = 'lightgreen';
+        snakeboard_ctx.fillStyle = 'lime';
         snakeboard_ctx.strokestyle = 'darkgreen';
         snakeboard_ctx.fillRect(food_x, food_y, 10, 10);
         snakeboard_ctx.strokeRect(food_x, food_y, 10, 10);
