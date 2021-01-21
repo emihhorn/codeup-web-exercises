@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.45);
+    color: #4c4c4c;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.jumbotron {
+    background-size: cover;
+}
+
+.container {
+    background-color: red;
+    opacity: 90%;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: auto;
+    padding:0;
+}
+.list-group {
+    list-style: none;
+}
+
+.card-deck {
+    width: 100%;
+}
+.card-header {
+    background-color: green;
+}
+.dropdown-header {
+    background-color: darkred;
+}
+
+#
+
+.display-4 {
+    background: white;
+    opacity: 80%;
+    background-size: 100%;
+}

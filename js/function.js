@@ -64,6 +64,9 @@ function isTwo(thisNumber) {
 console.log(random);
 console.log(isTwo(random));
 
+
+
+
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a

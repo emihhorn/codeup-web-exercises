@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><!-- TODO: put your title here --></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet"href="css/custom.css">
+
+
+    <!-- Your custom css styles go here -->
+
+
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+</head>
+<body>
+<!doctype html>
+<html>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Pizza World</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Order online <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Zip Code" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+
+<!--                -->
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                        Dropdown-->
+<!--                    </a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                        <a class="dropdown-item" href="#">Action</a>-->
+<!--                        <a class="dropdown-item" href="#">Another action</a>-->
+<!--                        <div class="dropdown-divider"></div>-->
+<!--                        <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                    </div>-->
+
+            </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link sign up" href="#" tabindex="-1" aria="true">sign up</a>
+            </li>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="jumbotron <!--vh-100--> mb-0" style="background-image: url(img/pizza.png);">
+                <h1 class="display-4">Welcome to Pizza World</h1>
+            </div>
+        </div>
+    </div>
+    <div class="d-sm-none"></div>
+    <div class="d-none d-md-block"></div>
+    <div class="container">
+        <!-- Content here --> <h2>Build your own pizza!</h2>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab"><span
+                        class="badge badge-light">1</span> Size and crust</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab"><span
+                        class="badge badge-light">2</span> Cheese and Sauce</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="toppings-tab" data-toggle="tab" href="#toppings" role="tab"
+                   aria-controls="toppings"
+                   aria-selected="false"><span class="badge badge-light">3</span> Toppings</a>
+            </li>
+        </ul>
+
+        <div class="card tab-content">
+            <div class="tab-pane active" id="size" role="tabpanel" aria-labelledby="size-tab">
+                <div class="card-header d-block p-2 bg-primary text-white">
+                    Choose size and crust
+                </div>
+                <div class="card-body">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-header">
+                            Hand Tossed
+                        </div>
+                        <h6>Garlic seasoned crust with a rich, buttery taste.</h6>
+                        <div class="form-check space">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="Radios1">
+                                Small (10")
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios2"
+                                   value="option2">
+                            <label class="form-check-label" for="Radios2">
+                                Medium (12")
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-header">
+                            Crispy Thin
+                        </div>
+                        <h6>Thin enough for optimum crispy to crunchy ratio.</h6>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Radios" id="radio"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="radio">
+                                Medium (12")
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio" id="radio2"
+                                   value="option2">
+                            <label class="form-check-label" for="radio2">
+                                Large (14")
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</head>
+<body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<!-- Your custom JS goes here -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+</body>
+</html>
