@@ -1,17 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
+*{
+    font-family: 'Yusei Magic';
+}
 h1{
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.45);
-    color: #4c4c4c;
+    background-color: darkgreen;
+    color: darkred;
     padding-left: 0;
     padding-right: 0;
 }
 
 .jumbotron {
     background-size: cover;
+   ;
 }
 
 .container {
     background-color: red;
+    background-size: 100%;
     opacity: 90%;
     text-align: center;
     width: 100%;
@@ -19,6 +27,10 @@ h1{
     margin-bottom: auto;
     padding:0;
 }
+h2{
+color: #FFFFFF;
+}
+
 .list-group {
     list-style: none;
 }
@@ -29,14 +41,17 @@ h1{
 .card-header {
     background-color: green;
 }
+
+
+
 .dropdown-header {
     background-color: darkred;
 }
 
-#
+
 
 .display-4 {
     background: white;
-    opacity: 80%;
     background-size: 100%;
+    opacity: 80%;
 }
