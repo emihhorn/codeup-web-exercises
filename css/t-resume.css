@@ -3,7 +3,16 @@
 
 h1 {
     font-family: 'Pacifico', cursive;
+    color: palevioletred;
 }
+
+.jumbotron {
+    background-size: cover;
+    text-align: center;
+}
+
+
+
 
 h2 {
     font-family: Baskerville;
