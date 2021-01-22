@@ -1,1 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Yusei+Magic&display=swap');
+
+
+h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    font-family: Baskerville;
+}
+
+ul {
+    font-family: "American Typewriter";
+}
+
+h4 {
+    font-family: "American Typewriter"
+}
+
+
+p {
+    font-family: Baskerville;
+}
