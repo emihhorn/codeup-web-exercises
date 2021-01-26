@@ -360,3 +360,20 @@ function digital_root(n) {
 
 
 //var quotient = 4.4 / 2.0; // Change this line
+
+let arr = ["I", "go", "shopping"]
+
+delete arr[1];
+
+alert(arr[1] );
+
+alert(arr.length)
+
+//function takes in array as an argument and returns new
+// array containing the first and last elements of the passed array
+
+function firstLastArray(arr) {
+    var bucket = [];
+    bucket.push(arr[0]);
+    bucket.push(arr[arr.length - 1])
+}
