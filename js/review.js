@@ -20,7 +20,7 @@
 //
 // After the equals = sign, enter the string "edabit.com". Remember that strings must be wrapped in quotes " ".
 //
-// 1
+//
 // var website = "edabit.com"
 // Check
 //
@@ -66,15 +66,15 @@
 //     Concatenate firstName with lastName (notice the N is capitalized).
 // Your code should look exactly like what you've done in the above example, only you'll be adding (using the + operator) two strings together.
 //
-// 1
-// const firstName = "Luke "
-// 2
-// const lastName = "Skywalker"
-// 3
 //
-// 4
+ const firstName = "Luke "
+
+ const lastName = "Skywalker"
+//
+//
+//
 // // enter code below this line
-// 5
+//
 // return (firstName + lastName)
 // 6
 //
@@ -88,9 +88,9 @@
 //     This is what a basic function looks like:
 //
 //
-//     function addTwoNumbers(num1, num2) {
-//         return num1 + num2
-//     }
+     function addTwoNumbers(num1, num2) {
+         return num1 + num2
+     }
 // Can you guess what it does? Let's look at each part:
 //
 // addTwoNumbers is the name of the function.
@@ -103,20 +103,19 @@
 //     Multiply the first parameter num1 by the second parameter num2.
 //     Remember to use the return keyword, as shown in the above example.
 //
-// 1
-// function multiplyTwoNumbers(num1, num2) {
-//     2
-//     return num1 * num2
-//     3
-// }
+function multiplyTwoNumbers(num1, num2) {
+
+  return num1 * num2
+
+}
 // Check
 //
 // Although functions usually take parameters, they don't necessarily have to.
 //
 //
-// function hello() {
-//     return "Hello World!"
-// }
+ function hello() {
+     return "Hello World!"
+ }
 // When the above function hello() is called, it will output "Hello World!".
 //
 //     # Arrays
@@ -144,16 +143,16 @@
 //     Remember the first element in an array is 0.
 // Always return your answer!
 //
-//     1
-// const turtles = ["Raphael", "Michelangelo", "Leonardo", "Donatello"]
-// 2
 //
-// 3
-// function turtlePower(turtles) {
-//     4
-//     return[3]
-//     5
-// }
+ const turtles = ["Raphael", "Michelangelo", "Leonardo", "Donatello"]
+//
+//
+//
+ function turtlePower(turtles) {
+
+    return turtlePower[3]
+
+}
 // Check
 // # Mutability
 //
@@ -167,15 +166,15 @@
 // numbers[0] = 35
 // Given an array of numbers, set the value of the data stored at index 1 to 88.
 //
-// 1
-// const numbers = [1, 4, 6, 8, 0]
-// 2
 //
-// 3
+// const numbers = [1, 4, 6, 8, 0]
+//
+//
+//
 // // enter code below this line
-// 4
+//
 // numbers[1] = 88
-// 5
+//
 //
 // Check
 // # .length
@@ -185,23 +184,20 @@
 // Let's say we have an array of movie names:
 //
 //
-// const movies = ["The Matrix", "Se7en", "The Wizard of Oz", "Marry Poppins"]
+ const movies = ["The Matrix", "Se7en", "The Wizard of Oz", "Marry Poppins"]
 // To get the exact length of the movies array, we would use the .length property.
 //
 //
-//     movies.length
+     movies.length
 // That would give you 4, as there are four elements in the movies array.
 //
 //     Given an array arr of unknown length, return its length.
 //
-// 1
-// function getLength(arr) {
-//     2
-//     return arr.length
-//     3
 //
-//     4
-// }
+ function getLength(arr) {
+
+    return arr.length
+}
 // Check
 // # Objects
 //
@@ -329,13 +325,38 @@
 //     ["thaw", "gain"]
 // Return only numbers in the years array greater than 1950.
 
-1
-const years = [1763, 1972, 1925, 1916, 1984, 1124, 1950, 2020]
-2
 
-3
+const years = [1763, 1972, 1925, 1916, 1984, 1124, 1950, 2020]
+
 function getYears(years) {
-    4
     return years.filter(year => year > 1950)
-    5
 }
+
+
+
+// Digital root is the recursive sum of all the digits in a number.
+//
+//     Given n, take the sum of the digits of n. If that value has more than one digit,
+//     continue reducing in this way until a single-digit number is produced.
+//     The input will be a non-negative integer.
+
+function digital_root(n) {
+    var sNumero = n.toString();
+    var sum = 0;
+
+    for (i = 0; i < sNumero.length; i++) {
+        sum += parseInt(sNumero[i]);
+    }
+
+    if (sum > 9) {
+        return digital_root(sum);
+    }
+}
+
+// Test.assertEquals( digital_root(16), 7 )
+// Test.assertEquals( digital_root(456), 6 )
+
+
+
+
+//var quotient = 4.4 / 2.0; // Change this line
