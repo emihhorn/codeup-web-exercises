@@ -361,6 +361,8 @@ function digital_root(n) {
 
 //var quotient = 4.4 / 2.0; // Change this line
 
+//my version "warm up"
+
 let arr = ["I", "go", "shopping"]
 
 delete arr[1];
@@ -371,9 +373,154 @@ alert(arr.length)
 
 //function takes in array as an argument and returns new
 // array containing the first and last elements of the passed array
+// teacher's answer
 
 function firstLastArray(arr) {
     var bucket = [];
     bucket.push(arr[0]);
     bucket.push(arr[arr.length - 1])
+    return bucket;
+}
+// one more version
+
+let arr = ["I", "study", "JavaScript"];
+
+arr.splice(1,1);
+
+alert(arr);
+
+//review w/Tristan TA
+
+"use strict";
+
+// IIFE - Immediately Invoked Function Expression - (function() { ... })();
+/*
+Protects the code inside from being accessed via the console
+or other potentially unscrupulous JS code.
+*/
+(function () {
+
+  function insideIIFE() {
+      return "I'm Hidden From The Console >:]"
+  }
+
+    // Operators
+    {
+        // Check for value equality
+        console.log(1 == true); // -> true
+
+        // Check for value & type equality
+        console.log(1 === true); // -> false
+
+        // Get the remainder of a division operation
+        console.log(10 % 3); // -> 1
+    }
+
+    // Conditionals
+    {
+
+        // If/Else
+        {
+            if (1 < 2) { // <- Condition evaluates to true
+                console.log("Condition Met :)") // <- This gets logged
+            } else {
+                console.log("Condition Not Met :(") // <- This does not
+            }
+        }
+
+        // Ternary (Shorthand if/else)
+        // After `?` - True Condition
+        // After `:` - False Condition
+        {
+            let result = (2 < 1) ? "Condition Met :)" : "Condition Not Met :(";
+
+      console.log(result); // -> "Condition Not Met :("
+        }
+
+        // Switch Statement
+        // Checks for equality between a value and specified cases
+        {
+            let someNumber = 3;
+
+      switch (someNumber) {
+          case 1:
+              console.log("This logs when 'someNumber' equals 1")
+              break;
+
+          case 2:
+              console.log("This logs when 'someNumber' equals 2")
+              break;
+
+          default:
+              console.log("This logs when 'someNumber' matches none of the other cases.")
+              break;
+      }
+        }
+    }
+
+    // Loops
+    {
+        // For Loop - for(code_executed_once; condition; code_executed_every_iteration) { ... }
+        {
+            for (let i = 0; i < 10; i++) {
+                console.log(i); // -> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+            }
+        }
+
+        // While Loop - while(condition) { ... }
+        {
+            let i = 0;
+            while(i < 10) {
+                console.log(i); // -> 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+                i++;
+            }
+        }
+
+        // Break - Stop loop execution entirely
+        {
+            for (let i = 0; i < 10; i++) {
+                if(i === 5) break;
+                console.log(i); // -> 0, 1, 2, 3, 4
+            }
+        }
+
+        // Continue - Skip current iteration of loop
+        {
+            for (let i = 0; i < 10; i++) {
+                if(i === 5) continue;
+                console.log(i); // -> 0, 1, 2, 3, 4, 6, 7, 8, 9 (Note the missing 5)
+            }
+        }
+    }
+
+    // Arrays
+    // Zero Indexed - eg. First element of arr would be arr[0]
+    {
+        let people = ['Bob', 'Jeff', 'Kyle'];
+
+    console.log(people[1]); // -> Jeff
+        console.log(people[people.length-2]); // Jeff
+    }
+
+    // Objects
+    {
+        let person = {};
+
+        // Two ways of setting properties
+        person.name = "Kevin";
+        person['age'] = 25;
+
+    console.log(person); // -> { name: 'Kevin', age: 25 }
+    }
+
+})();
+
+function outsideIIFE() {
+    return "I'm Not Hidden From The Console :("
+}
+
+// IIFE Test
+{
+    console.log(outsideIIFE()); // -> I'm Not Hidden From The Console :(
+    console.log(insideIIFE()); // -> Error: insideIIFE is not defined
 }
