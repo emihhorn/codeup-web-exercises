@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
     <style>
+        /*.container {*/
+        /*    height: 600px;*/
+        /*    position: relative;*/
+        /*    border: 3px solid green;*/
+        /*}*/
+
+
+        .center {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+            border: 3px solid green;
+        }
+        /*.center {*/
+        /*    margin: 0;*/
+        /*    position: absolute;*/
+        /*    top: 50%;*/
+        /*    left: 50%;*/
+        /*    -ms-transform: translate(-50%, -50%);*/
+        /*    transform: translate(-50%, -50%);*/
+        /*}*/
+
+        h1 {text-align: center;}
+        h2 {text-align: center}
+        ul {text-align: center}
+        p {text-align: center;}
+        div {text-align: center;}
+        button {color: darkblue}
+
         .tealText {
             color: teal;
         }
@@ -20,15 +50,18 @@
 
 </head>
 <body>
+<div class="container">
+    <div class="center">
 
 <h1 id="main-header">Hello World!</h1>
-<ul>
+<div>
     <li data-dbid="1" class="odd">Item 1</li>
     <li data-dbid="2" class="even">Item 2</li>
     <li data-dbid="3" class="odd">Item 3</li>
     <li data-dbid="4" class="even">Item 4</li>
     <li data-dbid="5" class="odd">Item 5</li>
-</ul>
+</div>
+<!--changed ul to div to center li-->
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -40,10 +73,21 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
-<button id="btn1">Click Me!</button>
-<button id="btn2">Click Me!</button>
-<button id="btn3">Click Me!</button>
-<button id="btn4">Click Me!</button>
+            <hr>
+            <button id="btn1">Click Me!</button>
+            <br>
+            <hr>
+            <button id="btn2">Click Me!</button>
+            <br>
+            <hr>
+            <button id="btn3">Click Me!</button>
+            <br>
+            <hr>
+            <button id="btn4">Click Me!</button>
+            <hr>
+
+    </div>
+</div>
 
 <script>
     (function() {
@@ -102,6 +146,30 @@
         };
         var button1 = document.getElementById("btn1");
         button1.addEventListener("click", buttonClick1);
+
+
+
+
+    //Todo: Second Button
+        var buttonClick2 = function (){
+            subHeader.setAttribute("class", "greyText");
+        }
+        var button2 = document.getElementById("btn2");
+        button2.addEventListener("click", buttonClick2);
+
+
+
+
+    //Todo: Third Button
+        var buttonClick3 = function (){
+            var evens = document.getElementsByClassName("even");
+            for (var i = 0; i<evens.length;i++) {
+                evens[i].setAttribute("class", "even tealText");
+            }
+        };
+
+        var button3 = document.getElementById("btn3");
+        button3.addEventListener("click", buttonClick3);
 
 
     })();
