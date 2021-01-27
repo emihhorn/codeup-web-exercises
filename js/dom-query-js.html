@@ -3,16 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+    <style>
+        .tealText {
+            color: teal;
+        }
+
+        .greyText {
+            color: grey;
+        }
+
+    </style>
+
+
+
+
+
 </head>
 <body>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
-    <li data-dbid="1">Item 1</li>
-    <li data-dbid="2">Item 2</li>
-    <li data-dbid="3">Item 3</li>
-    <li data-dbid="4">Item 4</li>
-    <li data-dbid="5">Item 5</li>
+    <li data-dbid="1" class="odd">Item 1</li>
+    <li data-dbid="2" class="even">Item 2</li>
+    <li data-dbid="3" class="odd">Item 3</li>
+    <li data-dbid="4" class="even">Item 4</li>
+    <li data-dbid="5" class="odd">Item 5</li>
 </ul>
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
@@ -25,6 +40,11 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+<button id="btn1">Click Me!</button>
+<button id="btn2">Click Me!</button>
+<button id="btn3">Click Me!</button>
+<button id="btn4">Click Me!</button>
+
 <script>
     (function() {
         "use strict";
@@ -32,35 +52,40 @@
          var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "<em>JavaScript is Cool</em>";
+        mainHeader.innerHTML = "JavaScript is Cool";
 
         // TODO: Uncomment the next line and get the sub header element by id
          var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
+       // subHeader.style.color = "blue";
+        subHeader.setAttribute("class", "tealText");
 
         // TODO: Uncomment the next line and get all list items
         var listItems = Array.from(document.getElementsByTagName("li"));
        // console.log(listItems);
         // TODO: Set text color on every other list item to grey
-            //set classes to even and odd here\/
-
-            let makeGrey = true;
-        listItems.forEach((li) => {
-            if (makeGrey)
-                li.style.color = "grey"
-            makeGrey = !makeGrey
-            if(li.getAttribute("data-dbid") === "1")
-                li.style.color = "blue"
-        })
-        // TODO: Set text color of li with dbid = 1 to blue
-
+            //set classes to even and odd here\/ together
         //
-        // for(var j = 0; j <listItems.length; j++){
-        //     if(listItems[j].getAttribute("data-dbid") == 1)
-        //         listItems[j].setAttribute("class",listItems[j].getAttribute("class") +("blue"));
-        // }
+        //     let makeGrey = true;
+        // listItems.forEach((li) => {
+        //     if (makeGrey)
+        //         li.style.color = "grey"
+        //     makeGrey = !makeGrey
+        //     if(li.getAttribute("data-dbid") === "1")
+        //         li.style.color = "blue"
+        // })
+
+        // Separate
+        var evens = document.getElementsByClassName("even");
+        for (var i = 0;i<evens.length;i++) {
+            evens[i].setAttribute("class", "even greyText");
+        }
+
+        // TODO: Set text color of li with dbid = 1 to blue
+        var listItem1 = document.getElementsByTagName("li")[0];
+        listItem1.setAttribute("class", "tealText");
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
          var subParagraphs = document.getElementsByClassName("sub-paragraph");
@@ -69,6 +94,14 @@
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
         subParagraphs[0].innerText="Mission Accomplished!";
 
+
+
+    //Todo: First Button
+        var buttonClick1 = function(){
+            mainHeader.innerHTML = "<em>JavaScript is Cool</em>";
+        };
+        var button1 = document.getElementById("btn1");
+        button1.addEventListener("click", buttonClick1);
 
 
     })();
