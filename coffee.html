@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <title>Coffee Time</title>
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <!-- 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+                  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+    <!-- updating bootsrap --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- end of updating bootrap -->
+
+    <script href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="css/coffeestyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Potta+One&family=Yusei+Magic&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<nav class="white-text navbar navbar-expand-lg sticky-top">
+    <a class="navbar-brand" href="#"><img src="img/img.png" height="80" width="40"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="#coffeeList" class="white-a nav-link">Coffee List</a>
+            </li>
+        </ul>
+        <a class="navbar-brand d-none d-lg-block coffee-text" href="#"><h1>Luna's Latte</h1></a>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="#newCoffee" class="white-a nav-link">Add Coffee<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="white-text jumbotron jumbotron-fluid m-0">
+        <div class="container text-center">
+            <div class="pt-4">
+                <h1 class="display-3">Luna's Lattes</h1>
+                <h4 class="jumbotron-tex-shadow">Because you should be able to have Great Coffee anytime</h4>
+            </div>
+
+            <a id="newCoffee"></a>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-around" id="coffeeSearch">
+        <form class="w-50 p-4">
+            <div class="row p-1">
+                <div class="col">
+                    <label for="roast-selection" class="light-text">Coffee Roast</label>
+                    <select id="roast-selection" class="form-control">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-1">
+                <input id="submit" class="form-control myButton" type="submit"/>
+            </div>
+        </form>
+
+        <form class="w-50 p-4">
+            <div class="row p-1">
+                <div class="col-6">
+                    <label for="new-name" class="light-text">Add a Coffee</label>
+                    <input type="text" class="form-control" id="new-name" placeholder="Coffee Name..">
+                </div>
+                <div class="col-6">
+                    <label for="new-roast" class="light-text">Select roast</label>
+                    <select id="new-roast" class="form-control">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="p-1">
+                <button type="submit" class="form-control myButton" id="submitNew">Submit</button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <div id="coffeeList" class="px-4">
+        <div class="card-columns" id="coffees">
+        </div>
+    </div>
+
+</div>
+
+
+
+<footer class="mainfooter" role="contentinfo">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <!--Column1-->
+                    <div class="footer-pad">
+                        <h4>Coffee Project</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#"></a></li>
+                            <li><a href="#">Payment Center</a></li>
+                            <li><a href="#">Contact Directory</a></li>
+                            <li><a href="#">Forms</a></li>
+                            <li><a href="#">News and Updates</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <!--Column1-->
+                    <div class="footer-pad">
+                        <h4>Emily Horn</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">CODEUP Student</a></li>
+                            <li><a href="#">Resume</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Linked In</a></li>
+                            <li><a href="#">Tweeter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <!--Column1-->
+                    <div class="footer-pad">
+                        <h4>Javier Estrada</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#">CODEUP Student</a></li>
+                            <li><a href="#">Resume</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Linked In</a></li>
+                            <li><a href="#">Tweeter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow Us</h4>
+                    <ul class="social-network social-circle">
+                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Github"><i class="fa fa-github"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Instagrant"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 copy">
+                    <p class="text-center">&copy; Copyright 2021 - Coffe Coders.  All rights reserved. Dont forget to push up your work.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+</html>
