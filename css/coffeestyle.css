@@ -1,4 +1,13 @@
-t-text{
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: auto;
+    text-decoration: none;
+    color: initial;
+}
+
+
+light-text{
     color: #B5926E;
 }
 a:hover{
