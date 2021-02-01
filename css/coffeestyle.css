@@ -8,10 +8,10 @@ a.button {
 
 
 light-text{
-    color: #B5926E;
+    color: wheat;
 }
 a:hover{
-    color: #00aba9;
+    color: tomato;
 }
 .coffee-text {
     font-size: 33px;
@@ -120,8 +120,8 @@ h1.display-3 {
 
 footer {
     background: #16222A;
-    background: -webkit-linear-gradient( #3A6073, teal);
-    background: linear-gradient( #3A6073, teal);
+    background: -webkit-linear-gradient( #3A6073, teal, black);
+    background: linear-gradient( #3A6073, teal, black);
     color: white;
     margin-top:100px;
 }
