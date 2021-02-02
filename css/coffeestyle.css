@@ -100,9 +100,11 @@ nav {
 }
 
 #jumbotron-tex-shadow {
-    text-shadow: 2px 2px #FF0000;
-    background-color: red;
-    opacity: 0.5;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-family: Architects Daughter;
+    text-shadow: 6px 6px slategray;
+    opacity: 0.3;
 }
 
 h1.display-3 {
@@ -229,4 +231,20 @@ ul.social-network li {
 
 .social-network a {
     background-color: #F9F9F9;
+}h5 {
+     font-family: "Yusei Magic";
+ }
+h4 {
+    font-family: "Yusei Magic";
 }
+
+
+#navcol-1 {
+    font-size: 18px
+}
+@media (max-width: 576px) {
+    .navbar-dark .navbar-nav .nav-link {
+        float: right
+    }
+}
+
