@@ -28,4 +28,4 @@ $("h1").each(function (){
     alert($(this).html())
 });
 
-$('h1, p, li').css({"background-color": "blue"});
+$('h1, p, li').css({"background-color": "turquoise"});
