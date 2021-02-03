@@ -1,8 +1,8 @@
 "use strict"
-
-$(document).ready(function (){
-    alert("Can you guess the name of this Movie?")
-})
+//
+// $(document).ready(function (){
+//     alert("Can you guess the name of this Movie?")
+// })
 
 
 // document.getElementById("movieStatement").style.background = "palevioletred";
@@ -19,7 +19,7 @@ texts.forEach(function (text) {
 
 // $('.codeup').css('border', '1px solid red');
 //
-// $('li').css('font-size', '20px');
+$('container').css('font-size', '20px');
 
 // alert($("first-heading").html("text"));
 //
