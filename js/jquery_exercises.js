@@ -68,3 +68,6 @@ $('li').hover(
         $('li').css('color', 'teal');
     }
 );
+
+
+submitButton.addEventListener('click', showResults);
