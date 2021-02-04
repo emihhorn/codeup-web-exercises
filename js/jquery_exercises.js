@@ -7,6 +7,13 @@
 
 // document.getElementById("movieStatement").style.background = "palevioletred";
 
+var texts = Array.from(document.getElementsByClassName("about"));
+
+texts.forEach(function (text) {
+    text.style.color = "#5e2d5c";
+});
+
+
 var texts = Array.from(document.getElementsByClassName("filler-text"));
 
 texts.forEach(function (text) {
@@ -50,7 +57,7 @@ $('container').css('font-size', '20px');
 
 $('h1').click(
     function() {
-        $(this).css('background-color', '#F439A1');
+        $(this).css('background-color', '#f5bc42');
     }
 );
 

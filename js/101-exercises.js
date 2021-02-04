@@ -1677,6 +1677,8 @@ addToDone("Exercise 100 is complete.")
 // Hint: Similarly to how we sometimes begin a function with setting a variable to zero, we need a starting place:
 // Hint: Consider creating a variable that is a object with the keys "price" and "quantity" both set to 0. You can then compare each item's price and quantity total to the one from "most"
 
+
+
 function mostSpentOnItem(x){
     var highest={'title':'blank', 'price':0, 'quantity':0}
     for(var i=0;i<x.items.length;i++){
