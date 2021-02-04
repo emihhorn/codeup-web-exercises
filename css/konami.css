@@ -1,0 +1,33 @@
+body {
+    color: #444;
+    font: normal 16px Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.code {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.code span {
+    background: #cccccc; /* Old browsers */
+    background: -moz-linear-gradient(left,  #cccccc 0%, #eeeeee 50%, #cccccc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#cccccc), color-stop(50%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* IE10+ */
+    background: linear-gradient(to right,  #cccccc 0%,#eeeeee 50%,#cccccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#cccccc',GradientType=1 ); /* IE6-9 */
+
+    box-shadow: 1px 0 0 #efefef inset, -1px 0 0 #efefef inset;
+    border: 1px solid #bbb;
+    border-bottom: 4px solid #aaa;
+    border-radius: 3px;
+    display: inline-block;
+    height: 24px;
+    padding: 5px;
+    margin: 0 1px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    width: 24px;
+}
