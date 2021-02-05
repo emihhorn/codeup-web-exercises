@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute Methods</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+        .highlighted {
+            background-color: gold;
+            /*font-weight: bold;*/
+        }
+        body {
+            text-align: center;
+        }
+        dt {
+            display: inline-block;
+        }
+    </style>
+    <script src="jquery-3.5.1.js"></script>
+</head>
+<body>
+
+<!--    The <dd> tag is used to describe a term/name in a description list.-->
+<!--    The <dd> tag is used in conjunction with <dl> (defines a description list) -->
+<!--    and <dt> (defines terms/names). -->
+<!--    Inside a <dd> tag you can put paragraphs,
+        line breaks, images, links, lists, etc.-->
+
+
+<p>10 FAQs about national parks</p>
+<dl>
+    <dt>Arches</dt>
+    <dd>About Arches Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Badlands</dt>
+    <dd>About Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Carlsbad Caverns</dt>
+    <dd>About Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Denali</dt>
+    <dd>Did you know ...Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Everglades</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Abilene</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur. </dd>
+    <br>
+    <dt>Big Bend</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur</dd>
+    <br>
+    <dt>Choke Canyon</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </dd>
+    <br>
+    <dt>Davis Mountains</dt>
+    <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quas, </dd>
+    <br>
+    <dt>Enchanted Rock</dt>
+    <dd>About Lorem ipsum dolor sit amet, consectetur </dd>
+    <br>
+</dl>
+<a href="#" id="link">Click Here</a>
+
+
+<div>
+    <h3 class="styleMe">Sequoia</h3>
+
+    <ul>
+        <li>1. facts about the park.</li>
+        <li>2. facts about the park.</li>
+        <li>3. facts about the park.</li>
+        <li>4. facts about the park.</li>
+    </ul>
+</div>
+
+
+<script>
+    "use strict";
+
+    $("document").ready(function (){
+
+        $("dd").addClass("invisible");
+        $("#link").click(function (){
+            $("dd").toggleClass("invisible");
+        });
+
+        $("dt").addClass("highlighted");
+        $("dt").click(function (){
+            $("dt").toggleClass("highlighted");
+        });
+
+    });
+
+
+    $('h3').click(function(){
+
+            $(this).next('ul').children('li').css('font-weight', 'bold')
+    });
+
+
+    $('li').click(function(){
+        $(this).parent('ul').children('li').first('li').css('color', 'blue')
+    });
+
+
+</script>
+</body>
+</html>
