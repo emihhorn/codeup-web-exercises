@@ -5,10 +5,10 @@
     "categories": [
       "tool"
     ],
-    "price": 20
+    "price": 200
   }, {
   "title": "Drill",
-  "quantity": 5,
+  "quantity": 50,
   "categories": [
     "tool",
     "powered"
@@ -16,7 +16,7 @@
   "price": 100
 }, {
   "title": "Mower",
-  "quantity": 5,
+  "quantity": 50,
   "categories": [
     "tool",
     "gas",
@@ -25,7 +25,7 @@
   "price": 200
 }, {
   "title": "Screwdrivers",
-  "quantity": 25,
+  "quantity": 55,
   "categories": [
     "tool"
   ],

@@ -92,9 +92,11 @@
 
    }
 
+        $("#tool-time").click(function() {
+            $.get("data/inventory.json")
+                .done(toolTime);
+        });
 
-
-$('#tool-time').click()
 
     })();
 </script>
