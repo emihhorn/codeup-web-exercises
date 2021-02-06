@@ -4,7 +4,47 @@
     <title>Online Store</title>
 </head>
 <body>
+<style>
 
+
+    * {
+        margin: 0;
+    }
+    table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th {
+        background-color: #cddeff;
+    }
+    table, tr, th, td {
+        border: solid 1px black;
+        margin-top: 1em;
+        color: #4453A6;
+        height: 50px;
+        text-align: center;
+    }
+    h1, header {
+        text-align: center;
+        color: white;
+        background-color: #277c4b;
+        height: 60px;
+        border: solid black 1px;
+
+    }
+    h2 {
+        color: #007bb7;
+    }
+    button {
+        display: flex;
+        margin: auto;
+        background-color: #277c4b;
+        color: white;
+    }
+
+
+</style>
 <h1>My Tool Store</h1>
 
 <table id="products">
@@ -19,6 +59,9 @@
     <tbody id="insertProducts"></tbody>
 </table>
 
+<button type="button" id="tool-time">Refresh tools</button>
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
@@ -26,10 +69,33 @@
         "use strict";
         // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+        let toolsRequest = $.ajax("data/inventory.json")
+            .done(toolTime);
+
+
+
         // TODO: Take the data from inventory.json and append it to the products table
         //       HINT: Your data should come back as a JSON object; use console.log() to inspect
         //             its contents and fields
         //       HINT: You will want to target #insertProducts for your new HTML elements
+   function toolTime(tools) {
+       let html = ""
+       tools.forEach(function (tool) {
+           html += '<tr>'
+           html += '<td>' + tool.title + '</td>';
+           html += '<td>' + tool.quantity + '</td>';
+           html += '<td>' + tool.price.toFixed(2) + '</td>';
+           html += '<td>' + tool.pluralCategories + '</td>';
+           html += '<tr>'
+       })
+       $('#insertProducts').html(html);
+
+   }
+
+
+
+$('#tool-time').click()
+
     })();
 </script>
 
