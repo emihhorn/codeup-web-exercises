@@ -6,8 +6,8 @@
     <style>
         body{
             font-size: 17px;
-            font-family: arial;
-            background: #f4f4f4;
+            font-family: "Seashore Pro";
+            background: antiquewhite;
             line-height: 1.5em;
         }
         header{
@@ -31,9 +31,20 @@
     <h1>jQuery Crash Course | Ajax</h1>
 </header>
 <div id="container">
+
+    <h1 id="heading1">Heading One</h1>
+    <p id="param1">Lorem ipsum dolor</p>
+
     <div id="result"></div>
+
+
     <ul id="users"></ul>
+
+
     <h3>Add Post</h3>
+
+
+
     <form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
         <input type="text" id="title" placeholder="Title"><br>
         <textarea placeholder="Body" id="body"></textarea><br>
@@ -43,6 +54,7 @@
 
 <script>
     $(document).ready(function(){
+
         /*
         $('#result').load('test.html', function(responseTxt, statusTxt, xhr){
             if(statusTxt == "success"){
@@ -93,6 +105,10 @@
             });
         });
     });
+
+
+
+
 
     //jQuery Crash Course by Brad Travery on https://www.youtube.com/watch?v=3nrLc_JOF7k   Traversy Media
 </script>
