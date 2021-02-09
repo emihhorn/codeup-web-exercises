@@ -36,8 +36,17 @@
 
      // create the popup
      var popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-         '<h1 id="eat here">Tubbs</h1>'
+         '<h1 id="eat here">Tubbs</h1> "$" <a href=https://tubbsseafood.com/>"'
      );
+
+     var popup1 = new mapboxgl.Popup({ offset: 25}).setHTML(
+         '<h2 id="eat2">Stephanos</h2>"$$"<a href=https://www.stefanosflorence.com/>"'
+     );
+
+     var popup2 = new mapboxgl.Popup({ offset: 25}).setHTML(
+         '<h3 id="eat3">Victors </h3>"$$$"<a href=https://www.victorsflorence.com/>"'
+     );
+
 
      // Adding a marker to the map
      var marker = new mapboxgl.Marker()
@@ -62,6 +71,24 @@
      //
      // //
      // });
+     geocode("2600 S Irby St j, Florence SC 29505", mapboxToken).then(function (data) {
+         console.log(data)
+         var stefanosMarker = new mapboxgl.Marker()
+             .setLngLat(data)
+             .setPopup(popup1)
+             .addTo(map)
+     });
+
+     geocode("126 W Evans St, Florence SC 29505", mapboxToken).then(function (data) {
+         console.log(data)
+         var victorsMarker = new mapboxgl.Marker()
+             .setLngLat(data)
+             .setPopup(popup2)
+             .addTo(map)
+     });
+
+
+
 
      let restaurants = [
          {
@@ -70,7 +97,7 @@
            //gps: [-79.794192, 34.167799],
              foodType: "Seafood",
              priceAverage: "$",
-             popupHTML: "<a href=https://tubbsseafood.com/</a>" },
+             data: "<a href=https://tubbsseafood.com/</a>" },
 
          {
              name: "Stefano's",
@@ -78,7 +105,7 @@
            //gps: [-79.770466, 34.14516]
              foodType: "Italian",
              priceAverage: "$$",
-             popupHTML: "<a href=https://www.stefanosflorence.com/</a>"
+             data: "<a href=https://www.stefanosflorence.com/</a>"
 
          },
 
@@ -88,7 +115,7 @@
            //gps: [-79.766868, 34.197318]
              foodType: "Elegant",
              priceAverage: "$$$",
-             popupHTML: "<a href=https://www.victorsflorence.com/</a>"
+             data: "<a href=https://www.victorsflorence.com/</a>"
          }
          ];
 
