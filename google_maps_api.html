@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>The best Place's to eat in Flo Town</title>
 
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
     <style>
-        #zoo-heading {
+        #mapbox-map {
             color: teal;
         }
     </style>
 </head>
 <body>
-<div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid saddlebrown;'></div>
+
+<div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid turquoise;'></div>
+
 <script src="js/keys.js"></script>
 <script src="js/geocode-utils.js"></script>
+
 <script>
 
      // Today's lecture \/\/
@@ -25,7 +28,7 @@
          container: 'mapbox-map',
          style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
          center: [-79.76, 34.19], // starting position [lng, lat]
-         zoom: 12 // starting zoom
+         zoom: 10 // starting zoom
      });
 
      // Add zoom and rotation controls to the map.
@@ -42,15 +45,54 @@
          .setPopup(popup)
          .addTo(map);
 
-     geocode("1500 2nd Loop Rd, Florence, SC 29505", mapboxToken).then(function (data) {
-         var codeupMarker = new mapboxgl.Marker()
-             .setLngLat(data)
-             .addTo(map);
-     });
 
+
+     // geocode("1500 2nd Loop Rd, Florence, SC 29505", mapboxToken).then(function (data) {
+     //     var codeupMarker = new mapboxgl.Marker()
+     //         .setLngLat(data)
+     //         .addTo(map);
+     // });
+     //
      // reverseGeocode({lat: 34.1957, lng: -79.7619}, mapboxToken).then(function (data) {
      //     console.log(data);
      // })
+     //
+     //
+     // geocode("2600 S Irby St j, Florence, SC 29505", mapboxToken).then(function (data) {
+     //
+     // //
+     // });
+
+     let restaurants = [
+         {
+             name: "Tubb's",
+             location: "1500 2nd Loop Rd, Florence SC 29505",
+           //gps: [-79.794192, 34.167799],
+             foodType: "Seafood",
+             priceAverage: "$",
+             popupHTML: "<a href=https://tubbsseafood.com/</a>" },
+
+         {
+             name: "Stefano's",
+             location: "2600 S Irby St j, Florence SC 29505",
+           //gps: [-79.770466, 34.14516]
+             foodType: "Italian",
+             priceAverage: "$$",
+             popupHTML: "<a href=https://www.stefanosflorence.com/</a>"
+
+         },
+
+         {
+             name: "Victor's",
+             location: "126 W Evans St, Florence SC 29505",
+           //gps: [-79.766868, 34.197318]
+             foodType: "Elegant",
+             priceAverage: "$$$",
+             popupHTML: "<a href=https://www.victorsflorence.com/</a>"
+         }
+         ];
+
+
 
 
 
