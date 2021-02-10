@@ -26,46 +26,28 @@
     <input type="submit" value="Submit" class="submit">
 </div>
 </div>
-<div id='mapbox-map' style='width: 120vh; height: 70vh; margin: 15vh auto; border: 5px solid turquoise;'></div>
+<div id='mapbox-map' style='width: 80vh; height: 30vh; margin: 5vh auto; border: 5px solid turquoise;'></div>
 
-<div class="container">
+<div class="location">
     <div class="card">
-        <h1 class="name" id="name"></h1>
-        <p class="temp"></p>
-        <p class="clouds"></p>
-        <p class="desc"></p>
+        <h1 class="location-timezone">Timezone</h1>
+        <p>Icon</p>
+    del    <p class="clouds"></p>
+    del    <p class="desc"></p>
     </div>
 </div>
 
-
+<div class="temperature">
+    <div class="degree-section">
+    <h2 class="temperature-degree">34</h2>
+    <span>F</span>
+    </div>
+    <div class="temperature-description">Its friggin cold</div>
+</div>
 
 <script>
 
-//Today's Lecture\/\/
 
-    // Two ways to query the API:
-    // 1. With a string!
-    // $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
-    //     console.log(data);
-    // });
-    //
-    // // 2. With a string... AND AN OBJECT!!!
-    // $.get("https://api.openweathermap.org/data/2.5/onecall", {
-    //     APPID: OWM_TOKEN,
-    //     lat: 29.4241,
-    //     lon: -98.4936,
-    //     units: "imperial",
-    //     exclude: ["minutely", "hourly"]
-    // }).done(function(data) {
-    //     console.log(data);
-    // });
-
-        // let html = "";
-        // let itemHtml = "<div>";
-        // itemHtml += "<h4>" + data.timezone + "</h4>" + "</div>";
-        // itemHtml += "</div>";
-        // html += itemHtml;
-        // $('#post').html(html)
 
 mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
@@ -88,3 +70,4 @@ map.addControl(new mapboxgl.NavigationControl());
 
 
 </html>
+
