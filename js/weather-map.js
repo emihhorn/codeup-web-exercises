@@ -18,7 +18,9 @@ var button = addEventListener('click',function (name) {
 // let descValue = data['weather'][0]['description']
 //17410251e7b42b9f75fd4e1e02e2b9d5
 
-
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
+// https://stackoverflow.com/questions/4822852/how-to-get-the-day-of-week-and-the-month-of-the-year
+// https://stackoverflow.com/questions/1056728/where-can-i-find-documentation-on-formatting-a-date-in-javascript
 
 
 
