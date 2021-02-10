@@ -4,13 +4,41 @@
 // var desc = document.querySelector('.desc');
 // var clouds = document.querySelector('.clouds');
 // var button= document.querySelector('.submit');
+window.addEventListener('load', ()=> {
+    let long;
+    let lat;
 
-var button = addEventListener('click',function (name) {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=" +
-        "-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN)
-        .then(response => response.json())
-        .then(data => console.log(data))
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            long = position.coords.longitude;
+            lat = position.coords.latitude;
+
+            const proxy = "https://cors-anywhere.herokuapp.com/"
+            const api = `${proxy}"https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=" +
+        "${long}units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN`
+
+            fetch(api)
+                .then(response => {
+                    return response.json();
+        })
+                .then(data =>{
+                    console.log(data);
+                })
+
+            })
+
+    }else{
+        alert("Error, But the Weather is always Sunny inside your Heart!")
+    }
 })
+
+
+// var button = addEventListener('click',function (name) {
+//     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=" +
+//         "-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN)
+//         .then(response => response.json())
+//         .then(data => console.log(data))
+// })
 
 
 

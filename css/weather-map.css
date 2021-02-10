@@ -15,7 +15,6 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
     font-family: "American Typewriter";
     color: whitesmoke;
 }
@@ -31,7 +30,7 @@ body{
 }
 
 .temperature {
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .degree-section {
