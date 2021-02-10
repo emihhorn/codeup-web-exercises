@@ -3,30 +3,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Open Weather Map Playground Time</title>
+
+<!--    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />-->
+
+    <link rel="stylesheet" href="css/weather-map.css">
 </head>
 <body>
-<script src="js/jquery-3.5.1.js"></script>
+<!--<script src="js/jquery-3.5.1.js"></script>-->
+
 <script src="js/keys.js"></script>
+
+<!--<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>-->
+
+<!--<script src="js/geocode-utils.js"></script>-->
+
+
+
+
+<div class="input">
+    <input type="text" placeholder="Enter the city" class="input_text">
+    <input type="submit" value="Submit" class="submit">
+</div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h1 class="name" id="name"></h1>
+        <p class="temp"></p>
+        <p class="clouds"></p>
+        <p class="desc"></p>
+    </div>
+</div>
+
+
+
 <script>
+
+//Today's Lecture\/\/
+
     // Two ways to query the API:
     // 1. With a string!
-    $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
-        console.log(data);
-    });
+    // $.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=-98.4936&units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN).done(function(data) {
+    //     console.log(data);
+    // });
+    //
+    // // 2. With a string... AND AN OBJECT!!!
+    // $.get("https://api.openweathermap.org/data/2.5/onecall", {
+    //     APPID: OWM_TOKEN,
+    //     lat: 29.4241,
+    //     lon: -98.4936,
+    //     units: "imperial",
+    //     exclude: ["minutely", "hourly"]
+    // }).done(function(data) {
+    //     console.log(data);
+    // });
 
-    // 2. With a string... AND AN OBJECT!!!
-    $.get("https://api.openweathermap.org/data/2.5/onecall", {
-        APPID: OWM_TOKEN,
-        lat: 29.4241,
-        lon: -98.4936,
-        units: "imperial",
-        exclude: ["minutely", "hourly"]
-    }).done(function(data) {
-        console.log(data);
-    });
+
+
+
+
+        // let html = "";
+        // let itemHtml = "<div>";
+        // itemHtml += "<h4>" + data.timezone + "</h4>" + "</div>";
+        // itemHtml += "</div>";
+        // html += itemHtml;
+        // $('#post').html(html)
 
 
 </script>
+
 </body>
+<script src="js/weather-map.js" ></script>
+
 </html>
