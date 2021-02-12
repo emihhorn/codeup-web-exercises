@@ -1,37 +1,64 @@
-// var input = document.querySelector('.input_text');
-// var main = document.querySelector('#name');
-// var temp = document.querySelector('.temp');
-// var desc = document.querySelector('.desc');
-// var clouds = document.querySelector('.clouds');
-// var button= document.querySelector('.submit');
-window.addEventListener('load', ()=> {
-    let long;
-    let lat;
+$.get("https://api.openweathermap.org/data/2.5/onecall", {
+    APPID: OWM_TOKEN,
+    lat: 34.1941,
+    lon: -79.7636,
+    units: "imperial",
+    exclude: "minutely, hourly"
+}).done(function(data) {})
+    // console.log(data);
+//-79.76, 34.19
 
-    if(navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(position => {
-            long = position.coords.longitude;
-            lat = position.coords.latitude;
 
-            const proxy = "https://cors-anywhere.herokuapp.com/"
-            const api = `${proxy}"https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=" +
-        "${long}units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN`
 
-            fetch(api)
-                .then(response => {
-                    return response.json();
-        })
-                .then(data =>{
-                    console.log(data);
-                })
 
-            })
 
-    }else{
-        alert("Error, But the Weather is always Sunny inside your Heart!")
-    }
-})
 
+
+
+
+
+
+
+
+    // fetch(api)
+    //     .then(response => {
+    //         return response.json();
+    //     })
+    //     .then(data =>{
+    //         console.log(data);
+
+
+// window.addEventListener('load', ()=> {
+//     let long;
+//     let lat;
+//     let temperatureDescription = document.querySelector(".temperature-description");
+//     let temperatureDegree = document.querySelector(".temperature-degree");
+//     let locationTimeZone = document.querySelector(".location-timezone");
+//
+//
+    // if(navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(position => {
+    //         long = position.coords.longitude;
+    //         lat = position.coords.latitude;
+
+        //     const proxy = "https://cors-anywhere.herokuapp.com/"
+        //     const api = `${proxy}"https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=" +
+        // "${long}units=imperial&exclude=minutely,hourly&appid=" + OWM_TOKEN`
+
+
+
+                    //Set DOM Elements from API
+                    // temperatureDegree.textContent = temperature;
+                    // temperatureDescription.textContent= summary;
+            //     })
+            //
+            // })
+
+    // }else{
+    //     alert("Error, But the Weather is always Sunny inside your Heart!")
+//     }
+// })
+// });
 
 // var button = addEventListener('click',function (name) {
 //     fetch("https://api.openweathermap.org/data/2.5/onecall?lat=29.4241&lon=" +
