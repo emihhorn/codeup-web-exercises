@@ -21,29 +21,43 @@
 
 
 
-<div class="input">
-    <input type="text" placeholder="Enter the city" class="input_text">
-    <input type="submit" value="Submit" class="submit">
-</div>
-</div>
-<div id='mapbox-map' style='width: 80vh; height: 30vh; margin: 5vh auto; border: 5px solid turquoise;'></div>
+<!--<div class="input">-->
+<!--    <input type="text" placeholder="Enter the city" class="input_text">-->
+<!--    <input type="submit" value="Submit" class="submit">-->
+<!--</div>-->
+<!--</div>-->
+<div id='map' style='width: 80vh; height: 30vh; margin: 5vh auto; border: 5px solid turquoise;'></div>
 
-<div class="location">
-    <div class="card">
-        <h1 class="location-timezone">Timezone</h1>
-        <p>Icon</p>
-       <p class="clouds"></p>
-        <p class="desc"></p>
-    </div>
-</div>
+<!--<div class="location">-->
+<!--    <div class="card">-->
+<!--        <h1 class="location-timezone">Timezone</h1>-->
+<!--        <p>Icon</p>-->
+<!--       <p class="clouds"></p>-->
+<!--        <p class="desc"></p>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="temperature">
-    <div class="degree-section">
-    <h2 class="temperature-degree">34</h2>
-    <span>F</span>
-    </div>
-    <div class="temperature-description">Its friggin cold</div>
-</div>
+
+
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand">Weather Map</a>
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" id="user-input" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0"  type="submit">Search</button>
+    </form>
+</nav>
+<!--    weather cards-->
+<div class="row d-flex justify-content-between m-2" id="weather"></div>
+<!--    map display-->
+
+
+<!--<div class="temperature">-->
+<!--    <div class="degree-section">-->
+<!--    <h2 class="temperature-degree">34</h2>-->
+<!--    <span>F</span>-->
+<!--    </div>-->
+<!--    <div class="temperature-description">Its friggin cold</div>-->
+<!--</div>-->
 
 <script>
 
@@ -51,7 +65,7 @@
 
 mapboxgl.accessToken = mapboxToken;
 var map = new mapboxgl.Map({
-    container: 'mapbox-map',
+    container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
     center: [-79.76, 34.19], // starting position [lng, lat]
     zoom: 10 // starting zoom
@@ -59,6 +73,9 @@ var map = new mapboxgl.Map({
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
+
+
+
 
 
 </script>
