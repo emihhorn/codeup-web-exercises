@@ -29,32 +29,35 @@ const users = [
     }
 ];
 
+
+
+
+
 // TODO: fill in your name and email and add some programming languages you know
 // to the languages array
+
 // TODO: replace the `var` keyword with `const`, then try to reassign a variable
 // declared as `const`
-var name = 'your_name_here';
-var email = '';
-var languages = [];
+const name = 'Emily';
+const email = 'Emily@gmail.com';
+const languages = ['javascript','jquery','ruby'];
 
 // TODO: rewrite the object literal using object property shorthand
 users.push({
-    name: name,
-    email: email,
-    languages: languages
+    name,
+    email,
+    languages
 });
+console.log(users)
 
 // TODO: replace `var` with `let` in the following variable declarations
-var emails = [];
-var names = [];
+let emails = [];
+let names = [];
 
 // TODO: rewrite the following using arrow functions
-users.forEach(function(user) {
-    return emails.push(user.email);
-});
-users.forEach(function(user) {
-    return names.push(user.name);
-});
+users.forEach((user) => emails.push(user.email));
+users.forEach((user) => names.push(user.name));
+
 
 // TODO: replace `var` with `let` in the following declaration
 var developers = [];
@@ -83,7 +86,7 @@ list += '</ul>';
 
 
 
-// TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
+//TODO: Refactor the following code to use ES6 syntax. The output should stay the same.
 
 let message = '';
 const names = ['John', 'Paul', 'George', 'Ringo'];
