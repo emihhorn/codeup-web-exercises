@@ -10,8 +10,9 @@ itemList.addEventListener('click', removeItem);
 filter.addEventListener('keyup', filterItems);
 
 // Add item
-function addItem(e){
+function addItem(e) {
     e.preventDefault();
+    // console.log(1111);
 
     // Get input value
     var newItem = document.getElementById('item').value;
@@ -23,6 +24,8 @@ function addItem(e){
     // Add text node with input value
     li.appendChild(document.createTextNode(newItem));
 
+
+
     // Create del button element
     var deleteBtn = document.createElement('button');
 
@@ -31,6 +34,8 @@ function addItem(e){
 
     // Append text node
     deleteBtn.appendChild(document.createTextNode('X'));
+
+    itemList.appendChild(li);
 
     // Append button to li
     li.appendChild(deleteBtn);
@@ -53,7 +58,7 @@ function removeItem(e){
 function filterItems(e){
     // convert text to lowercase
     var text = e.target.value.toLowerCase();
-    // Get lis
+    // Get list
     var items = itemList.getElementsByTagName('li');
     // Convert to an array
     Array.from(items).forEach(function(item){
