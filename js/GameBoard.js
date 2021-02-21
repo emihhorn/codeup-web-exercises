@@ -21,7 +21,7 @@ class GameBoard {
         this.DOMGrid.style.cssText = `grid-template-columns: repeat(${GRID_SIZE}, ${CELL_SIZE}px)`;
 
         level.forEach((square, i) =>{
-          const div.document.createElement('div');
+          const div = document.createElement('div');
           div.classList.add('square', CLASS_LIST[square]);
           div.style.cssText = `width: ${CELL_SIZE}px; height: ${CELL_SIZE}px;`
           this.DOMGrid.appendChild(div);
@@ -46,5 +46,11 @@ class GameBoard {
 
     rotateDiv(pos, deg) {
         this.grid[pos].style.transform = `rotate(${deg}deg)`;
+    }
+
+    static createGameBoard(DOMGrid, level) {
+        const board = new this(DOMGrid);
+        board.createGrid(level);
+        return board;
     }
 }
