@@ -1,11 +1,12 @@
+
 (function() {
     "use strict"
-    var lat = 34.1941;
-    var lng = -79.7636;
-    var input = $("#user-input");
+    let lat = 34.1941;
+    let lng = -79.7636;
+
 //     lat: 34.1941,
 //     lon: -79.7636,
-    //ajax request
+
     weatherMap();
     function weatherMap() {
         $.get("https://api.openweathermap.org/data/2.5/onecall", {

@@ -26,7 +26,7 @@
 <!--    <input type="submit" value="Submit" class="submit">-->
 <!--</div>-->
 <!--</div>-->
-<div id='map' style='width: 80vh; height: 30vh; margin: 5vh auto; border: 5px solid turquoise;'></div>
+<div id='map' style='width: 90vh; height: 55vh; margin: 5vh auto; border: 5px solid turquoise;'></div>
 
 <!--<div class="location">-->
 <!--    <div class="card">-->
@@ -47,8 +47,16 @@
     </form>
 </nav>
 <!--    weather cards-->
-<div class="row d-flex justify-content-between m-2" id="weather"></div>
-<!--    map display-->
+<div class="container" id="weather">
+<!--    <div class="col">-->
+<!--        <div class="col s4 m4">-->
+<!--            <div class="card-panel teal opacity:0.6;">-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+
 
 
 <!--<div class="temperature">-->
@@ -73,7 +81,6 @@ var map = new mapboxgl.Map({
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
-
 
 
 
