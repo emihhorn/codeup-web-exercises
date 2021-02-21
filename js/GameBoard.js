@@ -54,3 +54,5 @@ class GameBoard {
         return board;
     }
 }
+
+export default GameBoard;
