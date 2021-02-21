@@ -116,7 +116,7 @@ let global = {
                 }
                 if (count == 10){
                     // Success!
-                    alert('Konami code entered! Do something cool here.');
+                    alert('Konami code entered!');
                     reset();
                 }
             } else {
