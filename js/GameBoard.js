@@ -224,10 +224,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //check for a win - more is when this score is reached
     function checkForWin() {
-        if (score === 274) {
+        if (score === 300) {
             ghosts.forEach(ghost => clearInterval(ghost.timerId))
             document.removeEventListener('keyup', movePacman)
             setTimeout(function(){ alert("You have WON!"); }, 500)
         }
     }
 })
+
+// tutorial with Ania Kubow
+// kubowania on youtube
