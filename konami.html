@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 
     <title>Konami Code</title>
     <link rel="stylesheet" href="css/konami.css">
+
 
 
 </head>
 <body>
 
 
-<div id="wrapper">
-    <div id="game"></div>
-    <div id="score"></div>
-    <button id="start-button">Start Game</button>
-</div>
+<h3>Score:<span id="score"></span></h3>
+
 <h5>Konami Code</h5>
 
 
 
-<p>
+<div>
     Click somewhere in the output box [here] to ensure focus.<br>
     Then enter the following code using your keyboard:
-</p>
+</div>
 
-<p class="code">
+<div class="code">
     <span>&uarr;</span>
     <span>&uarr;</span>
     <span>&darr;</span>
@@ -37,13 +35,14 @@
     <span>&rarr;</span>
     <span>B</span>
     <span>A</span>
-</p>
-<script src="js/GameBoard.js"></script>
+</div>
+<div class="grid"></div>
+
 <script src="js/konami.js"></script>
-<script src="js/index.js"></script>
+
 <script src="js/jquery-3.5.1.js"></script>
 
-
+<script src="js/GameBoard.js"></script>
 </body>
 </html>
 
