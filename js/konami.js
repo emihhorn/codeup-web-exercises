@@ -4,7 +4,7 @@ let global = {
         var konamikeys = [38,38,40,40,37,39,37,39,66,65],
             started = false,
             count = 0;
-
+    console.log("this ran");
         $(document).keydown(function(e){
             var reset = function() {
                 started = false;
@@ -12,7 +12,7 @@ let global = {
                 return;
             };
 
-            // key = e.keyCode;
+            let key = e.keyCode;
 
             // Begin watching if first key in sequence was pressed.
             if(!started){
