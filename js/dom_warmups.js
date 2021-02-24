@@ -23,3 +23,13 @@ spanBye.remove()
 
 spanHi.setAttribute("id","NewID")
 
+$("add-btn").click("click", function (){
+    let $inputVal = $("number").val();
+    console.log($inputVal);
+    let $spanVal = $("sum-output").text();
+    console.log($spanVal);
+    let $addSpans = parseInt($inputVal) + parseInt($spanVal);
+    console.log($addSpans);
+    $("#sum-output").text($addSpans);
+})
+
