@@ -136,3 +136,4 @@ function lastCommit(user) {
 }
 
 lastCommit('emihhorn').then((data) => console.log(data));
+//my wifi is spotty and did not git my last push .foahjfonsifvpowhfg0owerh
