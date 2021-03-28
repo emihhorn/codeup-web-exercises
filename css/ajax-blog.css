@@ -1,0 +1,87 @@
+html {
+    background-color:pink;
+
+
+}
+body{
+    background-color: papayawhip;
+}
+
+#result{
+    font-family: 'fantasy', cursive;
+    font-size: 2em;
+    padding: 1em;
+    margin: 1em;
+}
+
+.jumbotron{
+    height: 30em;
+    font-family: 'fantasy';
+    background: rgba(179, 219, 212, 1) url("../img/ritasIce.jpg") bottom;
+}
+/*/Users/emilyhorn/IdeaProjects/codeup-web-exercises/img/ritasIce.jpg*/
+.selfie {
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #e9c5ba;
+}
+
+
+
+
+.aboutUs{
+    background-color: white;
+    margin: 2em;
+    padding: 2em;
+
+}
+
+
+
+.postDesign{
+    background-color: white;
+    margin: 2em;
+    padding: 2em;
+}
+
+.generatorBox{
+    /*background-color: rgba(42,81,83,1);*/
+    margin-right: 2em;
+    margin-left: 2em;
+
+}
+.btn{
+    background-color: rgba(42,81,83,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+@media (min-width: 992px) {
+    /*.selfie {
+        margin-left: 8em;
+        margin-right: 8em;
+    }
+     */
+
+    .aboutUs{
+        margin: 8em;
+        padding: 2em 2em 2em 2em;
+    }
+
+
+
+    .postDesign{
+        margin: 8em;
+        padding: 2em;
+    }
+    .generatorBox{
+        /*background-color: rgba(42,81,83,1);*/
+        margin-right: 8em;
+        margin-left: 8em;
+
+    }
+}
